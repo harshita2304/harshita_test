@@ -41,8 +41,9 @@ router.post('/auth', function(req, res) {
 				req.session.username = username;
 				res.render('thank')
 			} else {
-				alert('Incorrect Username and/or Password!');
-        res.redirect('log')
+				alert('Incorrect Username and/or Password! OR the user may not be registered-please register');
+        //res.redirect('log')
+        res.render('register')
 			}			
 			
 		});
